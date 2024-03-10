@@ -28,6 +28,8 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "tsserver",
+                "tailwindcss",
+                "eslint",
                 "cssls",
                 "html",
             },

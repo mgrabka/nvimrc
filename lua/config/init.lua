@@ -37,16 +37,15 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
-autocmd({"BufWritePost"}, {
+autocmd({"BufWritePre"}, {
     group = FormatAndLintGroup,
-    command = ":FormatWrite",
+    pattern = "*.js,*.ts,*.jsx,*.tsx",
+    command = ":EslintFixAll"
 })
 
 autocmd({"BufWritePost"}, {
     group = FormatAndLintGroup,
-    callback = function()
-        require("lint").try_lint()
-    end,
+    command = ":FormatWrite",
 })
 
 autocmd('LspAttach', {
