@@ -4,20 +4,21 @@ return {
       local formatter = require("formatter")
       local default_formatters = require("formatter.defaults")
       local prettierd = default_formatters.prettierd
+      local prettier = default_formatters.prettier
       local stylua = default_formatters.stylua
       formatter.setup({
           filetype = {
               javascript = {
-                  prettierd
+                  prettier
               },
               javascriptreact = {
-                  prettierd
+                  prettier
               },
               typescript = {
-                  prettierd
+                  prettier
               },
               typescriptreact = {
-                  prettierd
+                  prettier
               },
               lua = {
                   stylua
