@@ -43,6 +43,14 @@ autocmd({"BufWritePre"}, {
     command = ":EslintFixAll"
 })
 
+autocmd({"BufWritePre"}, {
+    group = FormatAndLintGroup,
+    pattern = "*.go",
+    callback = function()
+      require('go.format').goimports()
+    end
+})
+
 autocmd({"BufWritePost"}, {
     group = FormatAndLintGroup,
     command = ":FormatWrite",
