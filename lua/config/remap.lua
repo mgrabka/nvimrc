@@ -32,7 +32,7 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", ":w !node<CR>")
 
-vim.keymap.set("n", "<ScrollWheelRight>", "<Nop>", { noremap = true, silent = true})
-vim.keymap.set("n", "<ScrollWheelLeft>", "<Nop>", { noremap = true, silent = true})
-vim.keymap.set("n", "<S-ScrollWheelUp>", "<ScrollWheelRight>", { noremap = true, silent = true})
-vim.keymap.set("n", "<S-ScrollWheelDown>", "<ScrollWheelLeft>", { noremap = true, silent = true})
+vim.keymap.set({"n", "v", "i"}, "<ScrollWheelRight>", "<Nop>", { noremap = true, silent = true})
+vim.keymap.set({"n", "v", "i"}, "<ScrollWheelLeft>", "<Nop>", { noremap = true, silent = true})
+vim.keymap.set({"n", "v", "i"}, "<S-ScrollWheelUp>", "<ScrollWheelRight>", { noremap = true, silent = true})
+vim.keymap.set({"n", "v", "i"}, "<S-ScrollWheelDown>", "<ScrollWheelLeft>", { noremap = true, silent = true})
