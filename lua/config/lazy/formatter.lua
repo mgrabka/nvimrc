@@ -20,6 +20,9 @@ return {
               typescriptreact = {
                   prettier
               },
+              svelte = {
+                  prettier
+              },
               lua = {
                   stylua
               }
