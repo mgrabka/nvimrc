@@ -9,47 +9,15 @@ end
 
 return {
     {
-      "catppuccin/nvim",
-      name = "catppuccin",
-      config = function()
-        require("catppuccin").setup({
-          term_colors = true,
-			    transparent_background = true,
-			    styles = {
-				    comments = {},
-				    conditionals = {},
-				    loops = {},
-				    functions = {},
-				    keywords = {},
-				    strings = {},
-				    variables = {},
-				    numbers = {},
-				    booleans = {},
-				    properties = {},
-				    types = {},
-			    },
-			    color_overrides = {
-				    mocha = {
-					    base = "#000000",
-					    mantle = "#000000",
-					    crust = "#000000",
-				    },
-			    },
-			    integrations = {
-				    telescope = {
-					    enabled = true,
-					    style = "nvchad",
-				    },
-				    dropbar = {
-					    enabled = true,
-					    color_mode = true,
-				    },
-			    },
-        })
-        -- vim.cmd("colorscheme catppuccin")
-        -- ColorMyPencils("catppuccin")
-      end
-
+      "slugbyte/lackluster.nvim",
+      lazy = false,
+      priority = 1000,
+      init = function()
+          -- vim.cmd.colorscheme("lackluster")
+          ColorMyPencils("lackluster-hack")
+          vim.cmd.colorscheme("lackluster-hack")
+          -- vim.cmd.colorscheme("lackluster-mint")
+      end,
     },
     {
         "rose-pine/neovim",
@@ -71,8 +39,8 @@ return {
                   TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
                 },
             })
-        vim.cmd("colorscheme rose-pine")
-        ColorMyPencils("rose-pine")
+        -- vim.cmd("colorscheme rose-pine")
+        -- ColorMyPencils("rose-pine")
 
        end
     },
